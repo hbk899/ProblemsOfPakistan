@@ -1,0 +1,94 @@
+<!-- <app-header></app-header> -->
+<div class="row">
+
+  <div class="col-for-sides" ></div>
+
+  <div class="col-for-page padding-responsive">
+
+    <div *ngIf="isLoggedIn">WELCOME</div>
+    
+    <div *ngIf="!isLoggedIn">not logged in</div>
+
+
+    <div class="list-item-wrapper" *ngFor="let article of articlesList">
+      <mat-card class="task-card">
+        <mat-card-header>
+          <div mat-card-avatar>
+
+            <!-- <cl-image public-id="{{task.dpImgUrl}}">
+              <cl-transformation width="40" height="40" gravity="face" radius="100" crop="thumb">
+              </cl-transformation>
+
+
+
+            </cl-image> -->
+
+
+          </div>
+          <mat-card-title><h1><markdown [data]="article.title "></markdown></h1></mat-card-title>
+                        <mat-card-subtitle>      <markdown [data]="article.author"></markdown>
+                               </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+        
+            <markdown   [data]="article.description" ></markdown>
+           
+         <mat-tab-group headerPosition="above">
+  <mat-tab ><ng-template mat-tab-label><i class="material-icons">
+    add_comment
+</i> </ng-template> New Solutions
+
+ <div class="list-item-wrapper" *ngFor="let comment of article.comments ">
+            <markdown [data] ="comment">
+            
+            
+            </markdown>
+
+            </div>
+            
+
+ </mat-tab>
+
+
+<mat-tab ><ng-template mat-tab-label><i class="material-icons">
+    check
+</i> </ng-template> Existing Solutions </mat-tab>
+
+
+
+</mat-tab-group>
+        </mat-card-content>
+         <mat-card-actions>
+    <button mat-button (click)="liking(article.id)" >LIKE</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>
+      </mat-card>
+
+
+    </div>
+
+
+    <mat-paginator [length]="noOfAssignments"
+              [pageSize]="pageSize"
+              [pageSizeOptions]="pageSizeOptions"
+              >
+              <!-- (page)="pageEvent = $event" -->
+    </mat-paginator>
+
+
+
+
+
+  </div>
+
+ 
+
+
+
+
+</div>
+
+
+ 
+  
+   
