@@ -89,7 +89,6 @@ export class AMainComponent implements OnInit {
   //     this.router.navigateByUrl('/');
         
   // });
-    
   // }
 
 
