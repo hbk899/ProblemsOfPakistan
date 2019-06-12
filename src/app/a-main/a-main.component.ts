@@ -86,8 +86,7 @@ export class AMainComponent implements OnInit {
   //   }).then(ref => {
   //     console.log('Added like with ID: ', this.user.id);
       
-  //     this.router.navigateByUrl('/');
-        
+  //     this.router.navigateByUrl('/');    
   // });
   // }
 
