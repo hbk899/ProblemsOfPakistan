@@ -30,7 +30,7 @@
     "angularx-qrcode": "^1.2.4",
     "core-js": "^2.5.4",
     "firebase": "^5.5.0",
-    "firebase-admin": "^8.1.0",
+    "firebase-admin": "^11.4.1",
     "material-design-icons": "^3.0.1",
     "ng-modules": "^2.0.9",
     "ngx-file-drop": "^4.0.4",
